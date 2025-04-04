@@ -6,10 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Ashish/Scenes/SampleScene.unity
+    path: Assets/Ashish/F&V Sorting/Scenes/F&V_Sorting.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: fe51e1585f699ae4abb19f2fb6fcec8c,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c310d2a569e656044b8348e744fd05dc,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: bf0a594d37a9aed4799f1974fbc37c77,
       type: 2}
