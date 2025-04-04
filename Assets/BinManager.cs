@@ -12,27 +12,27 @@ public class BinManager : MonoBehaviour
 
     public BinType binType;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        Item item = other.GetComponent<Item>();
+        Item item = collision.gameObject.GetComponent<Item>();
         if (item == null) return;
 
-        if (other.CompareTag("Fruit"))
+        if (collision.gameObject.CompareTag("Fruit"))
         {
             if (binType == BinType.Fruits)
             {
-                Destroy(other.gameObject);
+                Destroy(collision.gameObject);
             }
             else
             {
                 StartCoroutine(ReturnToOriginalPosition(item));
             }
         }
-        else if (other.CompareTag("Vegetable"))
+        else if (collision.gameObject.CompareTag("Vegetable"))
         {
             if (binType == BinType.Vegetables)
             {
-                Destroy(other.gameObject);
+                Destroy(collision.gameObject);
             }
             else
             {
