@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - FruitBin
-  - VegBin
+  - Fruit
+  - Vegetable
   layers:
   - Default
   - TransparentFX
