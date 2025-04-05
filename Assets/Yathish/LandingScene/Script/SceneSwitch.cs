@@ -20,6 +20,15 @@ public class SceneSwitch : MonoBehaviour
     // Method to switch scenes
     public void SwitchScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        Debug.Log("SwitchScene called with sceneName: " + sceneName);
+        if (Application.CanStreamedLevelBeLoaded(sceneName))
+        {
+            Debug.Log("Loading scene: " + sceneName);
+            SceneManager.LoadScene(sceneName);
+        }
+        else
+        {
+            Debug.LogError("Scene " + sceneName + " cannot be loaded. Please check if the scene is added to the build settings.");
+        }
     }
 }

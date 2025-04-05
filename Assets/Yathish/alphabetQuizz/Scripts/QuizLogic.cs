@@ -35,6 +35,8 @@ public class QuizManager : MonoBehaviour
 
     [SerializeField] private Image QuestionImageReference;
 
+    [SerializeField] private Sprite completionImage; // Add this field to hold the completion image
+
     void Start()
     {
         SetupPokeEvent();
@@ -50,12 +52,15 @@ public class QuizManager : MonoBehaviour
 
     void OnSelectEvent(PointerEvent pointerEvent, Options option)
     {
-        //Debug.Log("Clicked");
         if (CheckAnswer(option, questions[currentQuestionIndex]))
         {
             Debug.Log("Correct Answer!");
 
-            if (currentQuestionIndex >= questions.Length - 1) return;
+            if (currentQuestionIndex >= questions.Length - 1)
+            {
+                DisplayCompletionImage();
+                return;
+            }
 
             currentQuestionIndex++;
             DisplayQuestion(currentQuestionIndex);
@@ -73,6 +78,14 @@ public class QuizManager : MonoBehaviour
         OptionImage1.GetComponent<MeshRenderer>().material = questions[index].Options[0];
         OptionImage2.GetComponent<MeshRenderer>().material = questions[index].Options[1];
         OptionImage3.GetComponent<MeshRenderer>().material = questions[index].Options[2];
+    }
+
+    void DisplayCompletionImage()
+    {
+        QuestionImageReference.sprite = completionImage;
+        OptionImage1.SetActive(false);
+        OptionImage2.SetActive(false);
+        OptionImage3.SetActive(false);
     }
 
     public bool CheckAnswer(Options option, Question question)
