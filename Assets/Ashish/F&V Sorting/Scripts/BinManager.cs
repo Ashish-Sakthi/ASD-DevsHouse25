@@ -21,7 +21,7 @@ public class BinManager : MonoBehaviour
         {
             if (binType == BinType.Fruits)
             {
-                Destroy(collision.gameObject);
+                //Destroy(collision.gameObject);
             }
             else
             {
@@ -32,7 +32,7 @@ public class BinManager : MonoBehaviour
         {
             if (binType == BinType.Vegetables)
             {
-                Destroy(collision.gameObject);
+                //Destroy(collision.gameObject);
             }
             else
             {
