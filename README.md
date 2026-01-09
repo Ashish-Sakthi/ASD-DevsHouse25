@@ -52,13 +52,11 @@ ISE aims to enhance the **quality of life** and **learning effectiveness** of ch
 ## Tech Stack
 
 ### Software & Tools
-
 * **Unity** – VR application development
 * **Blender** – 3D modeling and environment design
 * **Figma** – UI/UX design and prototyping
-
-### 🕶 Hardware
-
+* 
+### Hardware
 * **Meta VR Headset (Meta Quest)**
 
 ---
