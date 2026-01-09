@@ -61,3 +61,7 @@ ISE aims to enhance the **quality of life** and **learning effectiveness** of ch
 
 ---
 ### Demo
+
+
+https://github.com/user-attachments/assets/aa14c9fc-3ab0-4714-8e5d-3de113c6a21b
+
